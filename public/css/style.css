@@ -1,0 +1,535 @@
+:root{
+    --blue:  #063B6D;
+    --blue-hover:  #0a5dab;
+    --blue-transparent:  #0a5dab9b;
+    --green: #53C999;
+    --green-hover: #5fffbf;
+    --white: #FBFCFE;
+    --black: #00000056;
+    --black-little: #000000b9;
+    --black-slim: #00000017;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 2.5px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, var(--blue-hover), var(--green-hover));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: open sans;
+    /* outline: 1px solid red; */
+}
+
+body{
+    width: 100%;
+    min-height: calc(100vh - 150px);
+}
+
+header, main, footer{
+    padding: 0 5%;
+}
+
+header{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav #logo{
+    width: 10%;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--blue);
+}
+
+nav #options{
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav #options #navigation{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 75px;
+    list-style: none;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+nav #options #navigation li a{
+    text-decoration: none;
+    color: var(--black-little);
+}
+
+nav #options #navigation li a:hover{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+nav #options .logs{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-normal{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: var(--blue);
+    box-shadow: 0px 0px 10px 1px var(--black);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.btn-small{
+    padding: 2px 10px;
+    font-size: .8rem;
+    border-radius: 2.5px;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    outline: none;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px 1px var(--black-slim);
+    cursor: pointer;
+    transition: all .2s;
+    text-decoration: none;
+}
+
+.btn-normal:hover{
+    background-color: var(--blue-hover);
+}
+
+.btn-small:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    /* box-shadow: 0px 0px 10px 1px var(--black-little); */
+}
+
+main #hero{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../bg/home4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0px 0px 10px 1px var(--black-slim);
+    /* border-radius: 10px; */
+}
+
+main #hero::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+}
+
+main #hero .hero-text{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+    z-index: 1000;
+    padding-left: 25px;
+    height: 100%;
+}
+
+main #hero .hero-text h1{
+    font-size: 3.5rem;
+    color: var(--white);
+    /* -webkit-text-stroke: 1px; */
+    -webkit-text-stroke-color: var(--blue);
+    -webkit-text-stroke-width: 0.5px;
+    position: relative;
+    border-bottom: 1px dashed var(--white);
+    padding-bottom: 10px;
+    font-weight: bolder;
+}
+
+main #hero .hero-text h1::before{
+    content: "Hello😊, welcome to LOMA🏠";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 10px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    -webkit-text-stroke: 0  ;
+    font-family: arial;
+    font-weight: lighter;
+    padding-left: 5px;
+}
+
+main #hero .hero-text p{
+    width: 400px;
+    color: var(--white);
+}
+
+main #hero .hero-image{
+    /* background-image: url(../bg/home6.png); */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #hero .hero-image img{
+    width: 100%;
+}
+
+.search{
+    position: absolute;
+    z-index: 1000;
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 80%;
+    height: 60px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px 1px var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.search form input{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    outline: none;
+    background-color: var(--white);
+}
+
+.search form input:focus{
+    border: none;
+    outline: 3px solid var(--blue-hover);
+}
+
+.section-title{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.houses{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.div-houses{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* gap: 25px; */
+}
+
+.div-houses .house{
+    width: 300px;
+    height: 550px;
+    /* border: 1px solid var(--blue-hover); */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px var(--black-slim);
+    background-color: var(--white);
+    position: relative;
+    transition: all .1s .1s ease-in-out;
+}
+
+.div-houses .house::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* border: 1px solid var(--blue-hover); */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px var(--black-slim);
+    background-color: var(--blue-hover);
+    top: 0px;
+    left: 0;
+    z-index: -100;
+    transition: all .1s .1s ease-in-out;
+}
+
+.div-houses .house:hover::after{
+    top: 10px;
+    left: 10px;
+}
+
+.div-houses .house .image{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+    /* background-color: grey;*/
+}
+
+.div-houses .house .image img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.div-houses .house .about-house{
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.div-houses .house .about-house p{
+    width: 100%;
+    /* height: 40%; */
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.div-houses .house .about-house h2{
+    width: 100%;
+    height: 20%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.icons{
+    width: 100px;
+    /* height: 25px; */
+    /* margin: 5px;  */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.icons div a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--blue);
+}
+
+/* -------------------------------------------------------------------------------properties css----------------------------------------------------------------------------------------*/
+/* create */
+
+#form{
+    width: 100%;
+    padding: 25px 20%;
+    height: calc(100vh - 100px);
+    /* border: 1px solid var(--blue); */
+}
+
+#form .field{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+#form .field input, #form .field2 input{
+    outline: 1px solid var(--black-little);
+    border: 0;
+    margin: 0;
+}
+
+#form .field textarea{
+    resize: vertical;
+}
+
+#form .field input[type="checkbox"]{
+    margin-bottom: 10px;
+}
+
+#form .field input[type='text'],#form .field textarea {
+    width: 100%;
+    padding: 2px 4px;
+    border-radius: 2.5px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 10px 1px var(--black-slim);
+}
+
+#form .field input:focus{
+    outline: 3px solid var(--blue-transparent);
+}
+
+.group-input1, .group-input2{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+#form .field input[type='number'] {
+    width: 100%;
+    padding: 2px 4px;
+    border-radius: 2.5px;
+    margin-bottom: 5px;
+}
+
+/* index */
+
+.div-houses2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.div-houses2 .house{
+    width: 600px;
+    height: 400px;
+    /* border: 1px solid var(--blue-hover); */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px var(--black-slim);
+    background-color: var(--white);
+    position: relative;
+    transition: all .1s .1s ease-in-out;
+    /* margin-bottom: 50px; */
+}
+
+.div-houses2 .house::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* border: 1px solid var(--blue-hover); */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px var(--black-slim);
+    background-color: var(--blue-hover);
+    top: 0px;
+    left: 0;
+    z-index: -100;
+    transition: all .1s .1s ease-in-out;
+}
+
+.div-houses2 .house:hover::after{
+    top: 10px;
+    left: 10px;
+}
+
+.div-houses2 .house .image{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+    /* background-color: grey;*/
+}
+
+.div-houses2 .house .image img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.div-houses2 .house .about-house{
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.div-houses2 .house .about-house a{
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    height: 50%;
+}
+
+.div-houses2 .house .about-house a h2{
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.div-houses2 .house .about-house p{
+    width: 100%;
+    height: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* --------------------------------------------------------------------Show properties----------------------------------------------------------------------------  */
+

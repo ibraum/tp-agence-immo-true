@@ -1,0 +1,880 @@
+@font-face {
+    font-family: ibrand;
+    src: url('../font/ibrand.otf');
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --miel-clair: #F7DC6F;
+    --miel-moyen: #F2C464 ;
+    --miel-fonce: #FFC080;
+    --gris-clair: rgba(211, 215, 222, 0.826);
+    --white: rgb(255, 255, 255);
+    --harmony-clair: #C9D8DD;
+}
+
+::-webkit-scrollbar{
+    background-color: var(--white);
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    height: 100px;
+    border-radius: 50px;
+    background-color: var(--gris-clair);
+}
+
+body{
+    background-color: var(--white);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ibrand;
+    /* outline: 1px solid red; */
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 75px;
+    padding: 0 20%;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100%;
+}
+
+header nav #logo{
+    font-size: 1.3rem;
+    letter-spacing: 10px;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 25px;
+    min-width: 300px;
+}
+
+header nav ul li{
+    letter-spacing: 2.5px;
+    position: relative;
+}
+
+header nav ul li a{
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    transition: all .2s .01s ease-in-out;
+}
+
+header nav ul .navigation:hover a{
+    /* letter-spacing: 2.5px; */
+    text-decoration: underline;
+}
+
+header nav ul li button{
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+main{
+    width: 100%;
+    min-height: 650px;
+}
+
+main #hero{
+    width: 100%;
+    height: 100%;
+    padding: 0 20%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 600px;
+    background: url("../bg/key.jpg") fixed center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+main #hero .welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(2.5px);
+}
+
+main #hero .welcome h1{
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+}
+
+main #hero .welcome p{
+    text-align: center;
+    width: 85%;;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}
+
+main #hero .welcome .buttons{
+    display: flex;
+    gap: 25px;
+}
+
+.btn{
+    border-radius: 50px;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    /* width: 100px; */
+    padding: 10px 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all .1S .1S ease-in-out;
+}
+
+.btn:hover{
+    background-color: var(--white);
+}
+
+.btn-none{
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100px;
+    padding: 10px 20px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+main #hero .welcome-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #hero .welcome-image img{
+    width: 100%;
+}
+
+/* ------------------------------------------------------search section ------------------- */
+
+.search{
+    width: 100%;
+    min-height: 75px;
+    margin: 10px 0;
+    padding: 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms{
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    background-color: var(--gris-clair);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 10px; */
+}
+
+.input{
+    padding: 10px 10px;
+    border: none;
+    border-radius: 2.5px;
+}
+
+.title{
+    width: 100%;
+    padding: 25px 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h3{
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+/* --------------------------------------------------------------four-properties-home----------------------------------- */
+
+.four-properties-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    /* gap: 10px; */
+    padding: 25px 20%;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.four-properties-home .column1, .four-properties-home .column2{
+    width: 49%;
+    height: 700px;
+    /* grid-template-rows: 30% 70%; */
+    /* gap: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.column1-row1, .column2-row2{
+    background-color: var(--gris-clair);
+    width: 100%;
+    height: 52%;
+}
+
+.column1-row2, .column2-row1{
+    background-color: var(--gris-clair);
+    width: 100%;
+    height: 42%;
+}
+
+/* ------- */
+
+.column-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.column-row .img{
+    background: url("../bg/home.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.column-row .img, .column-row .desc{
+    width: 50%;
+    height: 100%;
+}
+
+.column-row .desc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+/* -----------------------------------------contact-------------------------------------------- */
+
+.contact-form{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    min-height: 600px;
+    padding: 25px 20%;
+}
+
+.contact-form .form-div{
+    border: 2px solid var(--gris-clair);
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form .image-div{
+    background-color: var(--gris-clair);
+    width: 100%;
+    height: 100%;
+    background: url("../bg/contact.jpg");
+    background-size: cover;
+    background-position: left;
+}
+
+.contact-form .form-div form{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.contact-form .form-div form input{
+    width: 100%;
+    padding: 10px 20px;
+    border: 2px solid var(--gris-clair);
+    border-radius: 4px;
+}
+
+.contact-form .form-div form textarea{
+    width: 100%;
+    height: 150px;
+    padding: 10px 20px;
+    border: 2px solid var(--gris-clair);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.contact-form .form-div form .submit{
+    width: 100%;
+}
+
+.contact-form .form-div form .submit button{
+    width: 100%;
+    background-color: var(--gris-clair);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+footer{
+    width: 100%;
+    height: 30px;
+    padding: 5px 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gris-clair);
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+.show_properties{
+    padding: 0 10%;
+}
+
+.actualise{
+    padding: 10px 20px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px var(--gris-clair);
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.actualise:hover{
+    background-color: rgba(127, 255, 212, 0.2);
+    outline: 1px solid var(--gris-clair);
+}
+
+.div-houses2{
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 25px;
+    margin-top: 10px;
+    margin-bottom: 90px;
+    /* border: 1px solid red; */
+}
+
+.div-houses2 .house{
+    width: 500px;
+    height: 300px;
+    /* border: 1px solid red; */
+    box-shadow: 0 0 10px 0.5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all .2s .1s ease-in-out;
+}
+
+.div-houses2 .house:hover{
+    box-shadow: 5px 5px 10px 0.5px rgba(0, 0, 0, 0.15);
+}
+
+.div-houses2 .house .image{
+    width: 100%;
+    height: 150px;
+    background-color: #C9D8DD;
+}
+
+.div-houses2 .house .about-house{
+    padding: 10px;
+}
+
+.div-houses2 .house .about-house a{
+    text-decoration: none;
+    color: black;
+    transition: all .1s .1s ease-in-out;
+}
+
+.div-houses2 .house .about-house a:hover{
+    color: var(--harmony-clair);
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .1px;
+}
+
+.div-houses2 .house .about-house a h2{
+    text-emphasis: ellipsis;
+    white-space: nowrap;
+    padding-right: 25px;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.div-houses2 .house .about-house p{
+    font-size: 1.5rem;
+}
+
+.div-houses2 .house .about-house .form-properties-opeations{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    height: 75px;
+}
+
+.div-houses2 .house .about-house .form-properties-opeations .operations-btn{
+    padding: 2px 20px;
+    font-size: .8rem;
+    color: white;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    border: none;
+    border-radius: 2px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.btn-blue{
+    background-color: rgb(0, 140, 255);
+}
+
+.btn-red{
+    background-color: rgb(255, 30, 0);
+}
+
+.show-main{
+    width: 100%;
+    padding: 0 20%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#carrousel-div{
+    transition: all .5s .1s ease-in-out;
+    /* display: flex; */
+}
+
+.big-div{
+    width: 890px;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* outline: 1px solid red; */
+    display: inline-flex;
+    transition: all .2s .1s ease-in-out;
+    overflow: hidden;
+}
+
+.directions{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: rgba(255,255, 255, 0.481);
+    transition: all .1s .1s ease-in-out;
+    cursor: pointer;
+}
+
+.directions:hover{
+    color: white;
+}
+
+.big-div-div{
+    min-width: 890px;
+    min-height: 600px;
+    outline: 1px solid blue;
+    transition: all .2s .1s ease-in-out;
+    /* position: absolute; */
+}
+
+.carrousel_div{
+    min-width: 890px;
+    min-height: 600px;
+    overflow: hidden;
+    transition: all .2s .1s ease-in-out;
+}
+
+.next{
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.property-infos{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.property-infos-form{
+    width: 100%;
+    min-height: 300px;
+}
+
+.property-caract{
+    width: 100%;
+}
+
+.table{
+    width: 100%;
+}
+
+.column{
+    width: 50%;
+    text-align: start;
+    padding: 10px 0;
+    font-weight: 100;
+    padding-left: 10px;
+}
+
+.row-caract{
+    /* border-bottom: 1px solid red; */
+    background-color: var(--harmony-clair);
+}
+
+.options-div{
+    padding: 0 15%;
+}
+
+.create-option{
+    width: 100%;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.create-option a{
+    padding: 5px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 4px;
+    font-size: .9rem;
+    border: 1px solid black;
+}
+
+.option-div-body{
+    width: 100%;
+    min-height: 200px;
+}
+
+.option-table{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.option-table thead, .option-table tbody{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.option-table thead tr{
+    background-color: #c9d8dd66;
+    color: black;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.option-table tbody tr{
+    background-color: #ffffff;
+    color: black;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 5px;
+}
+
+.option-table thead tr th, .option-table tbody tr td{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 25%;
+}
+
+.actions form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-form{
+    padding: 2px 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    height: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-form-edit{
+    background-color: rgb(0, 149, 255);
+}
+
+.btn-form-show{
+    background-color: rgb(40, 179, 30);
+}
+
+.btn-form-delete{
+    background-color: rgb(179, 16, 35);
+}
+
+.edit-section{
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20%;
+}
+
+.create-section{
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20%;
+    margin-bottom: 200px;
+}
+
+.edit-form{
+    width: 80%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.update-field{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.update-field label{
+    font-size: 1.2rem;
+}
+
+.update-field input{
+    padding: 10px 20px ;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    width: 100%;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 4px;
+}
+
+.update-field input:focus{
+    outline: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+.btn-submit{
+    padding: 10px 20px;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all .1S .1S ease-in-out;
+    cursor: pointer;
+}
+
+.btn-submit:hover{
+    background-color: rgb(75, 124, 214);
+}
+
+.return-btn{
+    padding: 2.5px 10px;
+    background-color: transparent;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    transition: all .1S .1S ease-in-out;
+}
+
+.return-btn:hover{
+    background-color: aliceblue ;
+}
+
+.group-input1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-input1 .field{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    gap: 5px;
+}
+
+.group-input1 .field input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 2px;
+}
+
+.group-input2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-input2 .field{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 48%;
+    gap: 5px;
+}
+
+.group-input2 .field input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 2px;
+}
+
+.property-create .field-out{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.property-create .field-out input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 2px;
+}
+
+.property-create .field-out textarea{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 2px;
+}
+
+.property-create .field-out select{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: 1px solid black;
+    background-color: white;
+    border-radius: 2px;
+    z-index: 1000;
+}
+
+.property-create .field-out .multi{
+    width: 100%;
+    /* padding: 5px; */
+    border: none;
+    outline: 1px solid black;
+    border-radius: 2px;
+    margin: 0;
+    background-color: white;
+}
+
+.property-create .field-out .multi div{
+    width: 100%;
+    /* padding: 5px; */
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    margin: 0;
+    background-color: white;
+}
+
+.property-create .field-out .multi div input{
+    width: 100%;
+    /* padding: 5px; */
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    margin: 0;
+    background-color: white;
+}
